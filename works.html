@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: #111;
+            box-shadow: 0 2px 10px rgba(255, 0, 127, 0.5);
+        }
+
+        .navbar a.nav-link {
+            color: #fff !important;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a.nav-link:hover {
+            color: #ff007f !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .categories-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .categories-section h1 {
+            color: #fff;
+            font-size: 3rem;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+            margin-bottom: 40px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .category {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(17, 17, 17, 0.9);
+            color: #fff;
+            border: 2px solid #ff007f;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.8);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .category:hover {
+            background-color: #ff007f;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* Styling for binary stream animation */
+        .binary-stream {
+            position: absolute;
+            color: rgba(255, 20, 147, 0.7);
+            font-size: 20px;
+            white-space: nowrap;
+            animation: binaryAnim 5s linear infinite;
+            animation-delay: 0s; /* Start animation immediately */
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.8), 0 0 20px rgba(255, 20, 147, 1);
+        }
+
+        @keyframes binaryAnim {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h1>Explore My Projects</h1>
+        <div class="categories-grid">
+            <a href="graphic-design.html" class="category">Graphic Design</a>
+            <a href="animation.html" class="category">Animation</a>
+            <a href="print-design.html" class="category">Print Design</a>
+            <a href="uiux-design.html" class="category">UI/UX Design</a>
+            <a href="short-film.html" class="category">Short Film</a>
+            <a href="branding-packaging.html" class="category">Branding & Packaging</a>
+            <a href="illustration.html" class="category">Illustration</a>
+            <a href="character-design.html" class="category">Character Design</a>
+            <a href="3d-modelling.html" class="category">3D Modelling</a>
+            <a href="logo-design.html" class="category">Logo Design</a>
+            <a href="product-design.html" class="category">Product Design</a>
+            <a href="research.html" class="category">Research</a>
+        </div>
+    </section>
+
+    <!-- Binary Animation Script -->
+    <script>
+        function createBinaryStream() {
+            const background = document.querySelector('.background');
+            const stream = document.createElement('div');
+            stream.classList.add('binary-stream');
+            const binaryString = Array.from({ length: 10 }, () => Math.random() > 0.5 ? '1' : '0').join('');
+            stream.textContent = binaryString;
+            stream.style.left = `${Math.random() * 100}%`;
+            stream.style.fontSize = `${Math.random() * 20 + 15}px`;
+            stream.style.animationDuration = `${Math.random() * 5 + 3}s`;
+            background.appendChild(stream);
+            stream.addEventListener('animationend', () => stream.remove());
+        }
+
+        setInterval(createBinaryStream, 100);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nitya Shri RK</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        /* Binary Animation Background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .binary-code {
+            position: absolute;
+            color: #ff007f;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            user-select: none;
+        }
+
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-height: 100vh;
+            margin-top: 50
+            px; /* Offset for fixed navbar */
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 3rem;
+            background: #111;
+            box-shadow: inset 0 0 10px #ff007f;
+            position: relative;
+        }
+
+        .left-section h1 {
+            color: #ff007f;
+            font-size: 3rem;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+        }
+
+        .left-section p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        .highlight {
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .right-section {
+            flex: 1;
+            padding: 3rem;
+            background: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .right-section h2 {
+            color: #ff007f;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+        }
+
+        .info-card {
+            background: #111;
+            border: 1px solid #ff007f;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            width: 100%;
+            box-shadow: 0 0 10px #ff007f;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff007f;
+        }
+
+        .info-card i {
+            color: #ff007f;
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #111;
+            box-shadow: 0 2px 10px rgba(255, 0, 127, 0.5);
+        }
+
+        .navbar a.nav-link {
+            color: #fff !important;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a.nav-link:hover {
+            color: #ff007f !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Binary Animation Background -->
+    <div class="background"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html">My Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Split Container -->
+    <div class="split-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1>About Me</h1>
+            <p>
+                Hi, I'm <span class="highlight">Nitya Shri RK</span>, a passionate design student at ISDI Mumbai. I love creating captivating visuals and bringing ideas to life with my unique blend of creativity and technical expertise.
+            </p>
+            <p>
+                Outside of work, I enjoy football, exploring new ideas, and staying engaged in my community. My goal is to make a lasting impact with every project I work on.
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Details</h2>
+
+            <!-- Education Card -->
+            <div class="info-card d-flex align-items-center">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h5>Education</h5>
+                    <p>Currently studying Design at ISDI Mumbai.</p>
+                </div>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="info-card d-flex align-items-center">
+                <i class="fas fa-language"></i>
+                <div>
+                    <h5>Languages</h5>
+                    <p>English, Tamil, Hindi</p>
+                </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="info-card d-flex align-items-center">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h5>Location</h5>
+                    <p>Mumbai, India | Chennai, India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <!-- Binary Animation Script -->
+<script>
+    const background = document.querySelector('.background');
+
+    function createBinaryCode() {
+        // Create a span for the binary code
+        const binary = document.createElement('span');
+        binary.classList.add('binary-code');
+
+        // Use only binary 0 and 1, but with a high-tech, minimalistic approach
+        binary.textContent = Math.random() > 0.5 ? '0' : '1';
+
+        // Randomize position and size for more variation
+        binary.style.left = `${Math.random() * 100}%`;
+        binary.style.top = `${Math.random() * 100}%`;
+        binary.style.fontSize = `${Math.random() * 20 + 20}px`;  // Larger binary code for a sleek, minimal look
+        binary.style.animationDuration = `${Math.random() * 3 + 2}s`; // Faster, subtle animations
+
+        // Add subtle fading and moving effect to the binary code for a more fluid, futuristic look
+        binary.style.animation = 'binary-fade 5s ease-out infinite';
+
+        // Set a muted, modern color scheme for the binary
+        const colors = ['#00ff88', '#ff007f', '#00ffff', '#ff9900', '#ff66cc'];
+        binary.style.color = colors[Math.floor(Math.random() * colors.length)];
+        binary.style.textShadow = `0 0 8px ${binary.style.color}, 0 0 20px ${binary.style.color}`;
+
+        // Append the binary element to the background
+        background.appendChild(binary);
+
+        // Remove the binary element after a short time
+        setTimeout(() => {
+            binary.remove();
+        }, 5000);  // Elements disappear more quickly for a clean aesthetic
+    }
+
+    // Create binary elements every 100ms
+    setInterval(createBinaryCode, 100);
+
+    // Cursor interaction for smooth glow effect
+    document.body.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        background.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(255, 0, 127, 0.15), rgba(0, 0, 0, 0.8) 80%)`;
+    });
+
+</script>
+
+<!-- Add the animation for binary fade -->
+<style>
+    @keyframes binary-fade {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.2);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.5);
+        }
+    }
+</style>
+    </script>
+</body>
+
+</html>

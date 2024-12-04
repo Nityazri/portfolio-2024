@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Modelling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: #111;
+            box-shadow: 0 2px 10px rgba(255, 0, 127, 0.5);
+        }
+
+        .navbar a.nav-link {
+            color: #fff !important;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a.nav-link:hover {
+            color: #ff007f !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .project-grid {
+            margin: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .project-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ff007f;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-item h3 {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-item a:hover h3 {
+            color: #ff007f !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Background animation */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .binary-code {
+            font-size: 1.5rem;
+            color: rgba(255, 20, 147, 0.7);  /* Increased the opacity here */
+            position: absolute;
+            animation: fall 3s infinite linear;
+            pointer-events: none;
+            line-height: 1.5;
+            opacity: 1;  /* Increased opacity for better visibility */
+            white-space: nowrap;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh); /* Falls to the bottom of the screen */
+            }
+        }
+
+        h1.text-center {
+            margin-top: 120px;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.8), 0 0 20px rgba(255, 0, 127, 0.5), 0 0 30px rgba(255, 0, 127, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="works.html">My Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background -->
+    <div class="background">
+        <!-- Binary code will be generated here -->
+    </div>
+
+    <!-- Animation Projects Section -->
+    <div class="container">
+        <h1 class="text-center">3D Modelling Works</h1>
+        <div class="project-grid">
+            <!-- Example Project 1 -->
+            <div class="project-item">
+                <a href="3d project1.html">
+                    <img src="3d modelling/project1/Demonique.png" alt="Project 1">
+                    <h3>Demonique</h3>
+                </a>
+            </div>
+            <!-- Example Project 2 -->
+            <div class="project-item">
+                <a href="3d project2.html">
+                    <img src="3d modelling/project2/Ebony & Ivory.png" alt="Project 2">
+                    <h3>Ebony & Ivory</h3>
+                </a>
+            </div>
+            <!-- Example Project 3 -->
+            <div class="project-item">
+                <a href="3d project3.html">
+                    <img src="3d modelling/project3/Cabin.png" alt="Project 3">
+                    <h3>Cabin</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Nitya Shri RK | All rights reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Binary Animation Script -->
+    <script>
+        const background = document.querySelector('.background');
+
+        function createBinaryCode() {
+            const binary = document.createElement('span');
+            binary.classList.add('binary-code');
+            binary.textContent = Math.random() > 0.5 ? '0' : '1';
+            binary.style.left = `${Math.random() * 100}%`;
+            binary.style.top = `-${Math.random() * 20}%`; // Start slightly above the screen
+            background.appendChild(binary);
+
+            setTimeout(() => {
+                binary.remove();
+            }, 3000); // Match the falling duration
+        }
+
+        // Start the animation immediately
+        createBinaryCode();
+        setInterval(createBinaryCode, 100);
+    </script>
+</body>
+
+</html>
